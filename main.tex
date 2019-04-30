@@ -1,0 +1,101 @@
+\documentclass[
+	12pt,
+	oneside,
+	a4paper,
+	chapter=TITLE,
+	english,
+	brazil,
+	hidelinks
+%	sumario=tradicional
+]{abntex2}
+
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{indentfirst}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{microtype}
+
+\usepackage{blindtext}
+
+\usepackage[alf]{abntex2cite}
+
+\setlength{\parindent}{1.3cm}
+\setlength{\parskip}{\onelineskip}
+\setlength\afterchapskip{0cm}
+
+
+\renewcommand{\ABNTEXchapterfont}{\fontseries{b}\selectfont} 
+\renewcommand{\ABNTEXchapterfontsize}{\normalsize}
+
+\renewcommand{\ABNTEXsectionfont}{\fontseries{b}\selectfont} 
+\renewcommand{\ABNTEXsectionfontsize}{\normalsize}
+
+\renewcommand{\cftchapterfont}{\ABNTEXchapterfont} 
+\renewcommand{\cftsectionfont}{\fontseries{m}\selectfont} 
+
+\renewcommand{\tocheadstart}{\ABNTEXchapterfont} 
+
+\renewcommand{\tocprintchapter}{%
+    \addtocontents{toc}{\cftsetindents{chapter}{0em}{2em}}}
+\cftsetindents{section}{0em}{2em}
+\setlength{\cftbeforechapterskip}{0em}
+
+\addtocontents{toc}{\vspace{\onelineskip}}
+%\cftsetindents{chapter}{0em}{2em}
+%\cftsetindents{section}{0em}{2em}
+
+\nobibintoc
+
+\makeindex
+
+\begin{document}
+
+\selectlanguage{brazil}
+
+\frenchspacing
+
+\pdfbookmark[0]{\contentsname}{toc}
+\tableofcontents*
+\cleardoublepage
+
+\textual
+
+\pagestyle{simple}
+
+\chapter{Introdução}
+
+\blindtext
+
+\section{Justificativa}
+
+\Blindtext
+
+\chapter{Desenvolvimento}
+
+\blindtext
+
+\begin{citacao}
+
+\blindtext\cite[5.3]{NBR10520:2002}.
+
+\end{citacao}
+
+\section{Justificativa}
+
+\Blindtext
+
+\chapter{Conclusão}
+
+\blindtext
+
+\section{Custos}
+
+\Blindtext
+
+\postextual
+
+\bibliography{bib}
+
+\end{document}
