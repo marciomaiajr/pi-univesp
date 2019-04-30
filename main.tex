@@ -6,7 +6,6 @@
 	english,
 	brazil,
 	hidelinks
-%	sumario=tradicional
 ]{abntex2}
 
 \usepackage{helvet}
@@ -16,6 +15,7 @@
 \usepackage{color}
 \usepackage{graphicx}
 \usepackage{microtype}
+\usepackage[labelfont={bf},font=small,skip=0.5cm]{caption}
 
 \usepackage{blindtext}
 
@@ -26,7 +26,6 @@
 \setlength{\parindent}{1.3cm}
 \setlength{\parskip}{\onelineskip}
 \setlength\afterchapskip{0cm}
-
 
 \renewcommand{\ABNTEXchapterfont}{\fontseries{b}\selectfont} 
 \renewcommand{\ABNTEXchapterfontsize}{\normalsize}
@@ -48,10 +47,23 @@
 %\cftsetindents{chapter}{0em}{2em}
 %\cftsetindents{section}{0em}{2em}
 
+\addtocontents{lof}{\vspace{\onelineskip}}
+%\setlength{\abovecaptionskip}{0.1cm}
+%\setlength{\belowcaptionskip}{0.1cm}
+
+\addtocontents{lot}{\vspace{\onelineskip}}
+
 \nobibintoc
 
 \titulo{Produção de biogás em pequena escala a partir de lixo orgânico e rejeito animal}
-\autor{Márcio de Souza Maia Junior RA 1819900}
+\autor{
+Adilson Barcelos Araujo RA 1830132\\
+Henrique da Costa Bertolasio dos Santos RA 1834296 \\
+Marcelo Rodrigues da Silva RA 1823767\\
+Marcio de Souza Maia Junior RA 1819900\\
+Osvalton Cílio Souza da Silva RA 1834284\\
+Sandra dos Anjos Lopes RA 1833347\\
+}
 \local{Cubatão - SP}
 \data{2019}
 \orientador{Tutor: Carlos Eduardo de Freitas Garcia}
@@ -63,12 +75,12 @@
 	\center
 	\ABNTEXchapterfont\large \imprimirinstituicao
 	\vfill
-	\fontseries{m}\large \imprimirautor
+	\fontseries{m}\normalsize \imprimirautor
 	\vfill
 	\ABNTEXchapterfont\large \imprimirtitulo
 	\vfill
-	\fontseries{m}\large\imprimirlocal\\
-	\fontseries{m}\large\imprimirdata
+	\fontseries{m}\normalsize\imprimirlocal\\
+	\fontseries{m}\normalsize\imprimirdata
 \end{capa}
 }
 
@@ -91,6 +103,11 @@
 	\fontseries{m}\large\imprimirdata
 \end{center}
 }
+
+\makeatletter
+\setlength{\@fptop}{5pt} % Set distance from top of page to first float
+\makeatother
+
 
 \makeindex
 
@@ -121,6 +138,14 @@ Throughout the history of humanity many environmental actions have been defined 
 \end{otherlanguage*}
 \end{resumo}
 
+\pdfbookmark[0]{\listfigurename}{lof}
+\listoffigures*
+\cleardoublepage
+
+\pdfbookmark[0]{\listtablename}{lot}
+\listoftables*
+\cleardoublepage
+
 \pdfbookmark[0]{\contentsname}{toc}
 \tableofcontents*
 \cleardoublepage
@@ -128,6 +153,14 @@ Throughout the history of humanity many environmental actions have been defined 
 \textual
 
 \pagestyle{simple}
+
+\input{introducao}
+
+\input{fundamentacao}
+
+\input{materiais_metodos}
+
+\input{analise}
 
 \chapter{Introdução}
 
@@ -147,13 +180,38 @@ Throughout the history of humanity many environmental actions have been defined 
 
 \end{citacao}
 
+\begin{figure}[htb]
+	\begin{center}
+	    \includegraphics[scale=1.0]{consumo_petroleo_sp.jpg}
+	\end{center}
+	\caption{\label{fig_grafico}Consumo de petróleo no estado de São Paulo}
+	%\legend{Fonte: \citeonline[p. 24]{araujo2012}}
+\end{figure}
+
+
 \section{Justificativa}
 
 \Blindtext
 
+\begin{figure}[htb]
+	\caption{\label{fig_grafico}Consumo de de eletricidade no estado de São Paulo}
+	\begin{center}
+	    \includegraphics[scale=1.0]{consumo_eletricidade_sp.jpg}
+	\end{center}
+	%\legend{Fonte: \citeonline[p. 24]{araujo2012}}
+\end{figure}
+
 \chapter{Conclusão}
 
 \blindtext
+
+\begin{figure}[htb]
+	\caption{\label{fig_grafico}Protótipo}
+	\begin{center}
+	    \includegraphics[scale=1.0]{Prototipo.jpg}
+	\end{center}
+	%\legend{Fonte: \citeonline[p. 24]{araujo2012}}
+\end{figure}
 
 \section{Custos}
 
