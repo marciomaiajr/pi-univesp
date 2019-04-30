@@ -9,7 +9,7 @@
 %	sumario=tradicional
 ]{abntex2}
 
-\usepackage{lmodern}
+\usepackage{helvet}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{indentfirst}
@@ -18,6 +18,8 @@
 \usepackage{microtype}
 
 \usepackage{blindtext}
+
+\renewcommand{\familydefault}{\sfdefault}
 
 \usepackage[alf]{abntex2cite}
 
@@ -48,6 +50,48 @@
 
 \nobibintoc
 
+\titulo{Produção de biogás em pequena escala a partir de lixo orgânico e rejeito animal}
+\autor{Márcio de Souza Maia Junior RA 1819900}
+\local{Cubatão - SP}
+\data{2019}
+\orientador{Tutor: Carlos Eduardo de Freitas Garcia}
+\instituicao{UNIVERSIDADE VIRTUAL DO ESTADO DE SÃO PAULO}
+\preambulo{Relatório parcial para a disciplina de Projeto Integrador do curso de Engenharia da Computação da Universidade Virtual do Estado de São Paulo.}
+
+\renewcommand{\imprimircapa}{%
+\begin{capa}%
+	\center
+	\ABNTEXchapterfont\large \imprimirinstituicao
+	\vfill
+	\fontseries{m}\large \imprimirautor
+	\vfill
+	\ABNTEXchapterfont\large \imprimirtitulo
+	\vfill
+	\fontseries{m}\large\imprimirlocal\\
+	\fontseries{m}\large\imprimirdata
+\end{capa}
+}
+
+\makeatletter 
+\renewcommand{\folhaderostocontent}{
+\begin{center}
+	\ABNTEXchapterfont\large UNIVERSIDADE VIRTUAL DO ESTADO DE SÃO PAULO
+	\vfill
+	\ABNTEXchapterfont\large \imprimirtitulo
+	\vfill
+	\hspace{.45\textwidth} 
+	\begin{minipage}{.5\textwidth} 
+	\SingleSpacing 
+	\fontseries{m}\normalsize\imprimirpreambulo
+	\\[1\baselineskip]
+	\fontseries{b}\normalsize\imprimirorientador
+	\end{minipage} 
+	\vfill
+	\fontseries{m}\large\imprimirlocal\\
+	\fontseries{m}\large\imprimirdata
+\end{center}
+}
+
 \makeindex
 
 \begin{document}
@@ -55,6 +99,27 @@
 \selectlanguage{brazil}
 
 \frenchspacing
+
+\imprimircapa
+
+\imprimirfolhaderosto*
+
+%\setlength{\absparsep}{18pt} % ajusta o espaçamento dos parágrafos do resumo
+\begin{resumo}\vspace*{-1.1cm}
+\SingleSpacing Ao longo da história da humanidade muitas ações ambientalistas têm sido definidas por sequências práticas e percepções que atingem, até os dias atuais, ritmos diferentes ao mesmo tempo em que oferecem uma revolução capaz de conduzir toda a humanidade na mesma direção. Como prova da continuidade em buscar por ações que minimizem os impactos causados ao meio ambiente é fácil apontar o uso de várias fontes de energia renováveis, como é o caso do biogás. Um composto de metano (CH4) e dióxido de carbono (CO2), o biogás, um biocombustível produzido por meio de dejetos humanos, esterco, resíduos agrícolas, etc., têm tornado um grande incentivador para a geração de energia limpa em todo o mundo. E, na busca por opções ambientalmente corretas a destinação de resíduos a necessidade de ampliação e diversificação da matriz energética brasileira esse relatório busca por verificar a viabilidade da construção de biodigestores em pequena escala para a geração de biogás através da decomposição de lixo orgânico e rejeito animal. Valendo de uma revisão bibliográfica e estudo a campo, ao final, essa pesquisa espera esclarecer quais as técnicas e as tecnologias envolvidas na produção do biogás capazes de oferecer uma opção para a geração de energia limpa que seja ambientalmente correta e economicamente viável.
+
+\textbf{Palavras-chave}: Biogás. Lixo orgânico. Rejeito animal. Adubo.
+\end{resumo}
+
+% resumo em inglês
+%\setlength{\absparsep}{18pt} % ajusta o espaçamento dos parágrafos do resumo
+\begin{resumo}[Abstract]\vspace*{-1.1cm}
+\begin{otherlanguage*}{english}\SingleSpacing
+Throughout the history of humanity many environmental actions have been defined by practical sequences and perceptions that reach, until the present day, diferente rhythms at the same time that they offer a revolution capable of leading all the humanity in the same direction. As proof of the continuity in searching for actions that minimize the impacts caused to the environment, it is easy to point out the use of several renewable energy sources, such as biogas. A compound of methane (CH4) and carbon dioxide (CO2), biogas, a biofuel produced through human waste, manure, agricultural waste, etc., have become a major incentive for clean energy generation worldwide. And, in the search for environmentally correct options for waste disposal, the need to expand and diversify the Brazilian energy matrix, this report seeks to verify the feasibility of the construction of small scale biodigesters for the generation of biogas through the decomposition of organic waste and animal waste. In the end, this research hopes to clarify which techniques and technologies are involved in biogás production. capable of offering an option for the generation of clean energy that is environmentally correct and economically viable.
+
+\textbf{Keywords}: Biogas. Organic waste. Animal waste. Fertilizer.
+\end{otherlanguage*}
+\end{resumo}
 
 \pdfbookmark[0]{\contentsname}{toc}
 \tableofcontents*
