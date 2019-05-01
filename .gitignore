@@ -11,6 +11,8 @@
 *.cb
 *.cb2
 .*.lb
+*.tui
+*.tmp
 
 ## Intermediate documents:
 *.dvi
